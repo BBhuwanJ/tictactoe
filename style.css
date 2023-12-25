@@ -98,7 +98,13 @@ html body {
     font-size: 35px;
     color: white;
 }
+@media screen and (max-width:500px) {
 
+    #mssge {
+        font-size: 15px;
+        color: white;
+    }
+}
 
 .turn {
     display: flex;
