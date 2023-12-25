@@ -1,0 +1,121 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--priColor);
+}
+
+:root {
+    --priColor: #88AB8E;
+    --secColor: #D2E3C8;
+}
+
+.container {
+    /* border: 2px solid red; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+
+}
+
+.gameBox {
+    /* border: 2px solid red; */
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.boxes {
+    border: 2px solid black;
+    height: 20vmin;
+    width: 18vmin;
+    background-color: var(--priColor);
+    cursor: pointer;
+    font-size: 35px;
+
+}
+
+.boxes:hover {
+    background-color: var(--secColor);
+}
+
+.b-t {
+    border-top: none;
+}
+
+.b-b {
+    border-bottom: none;
+}
+
+.b-r {
+    border-right: none;
+}
+
+.b-l {
+    border-left: none;
+}
+
+#resetBtn,
+#newBtn {
+    padding: 8px 11px;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+#resetBtn:hover {
+    background-color: var(--secColor);
+}
+
+#newBtn:hover {
+    background-color: var(--secColor);
+}
+
+
+
+.mssgeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+#mssge {
+    font-size: 35px;
+    color: white;
+}
+
+
+.turn {
+    display: flex;
+    gap: 0px;
+}
+
+#xTurn,
+#oTurn {
+    padding: 2px 15px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+#xTurn {
+    background-color: rgb(48, 255, 79);
+}
+
+.hide {
+    display: none;
+}
