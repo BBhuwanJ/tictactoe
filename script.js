@@ -35,11 +35,12 @@ boxes.forEach((box) => {
     }
     box.disabled = true;
     box.style.color = "black";
-    count++;
+    
     let win = checkWinner();
     if (count === 9 && !win) {
       gameDraw();
     }
+    count++;
   });
 });
 
