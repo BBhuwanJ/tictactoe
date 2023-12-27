@@ -21,7 +21,6 @@ const winPatterns = [
   [6, 7, 8],
 ];
 
-
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnOfX) {
@@ -35,15 +34,14 @@ boxes.forEach((box) => {
     }
     box.disabled = true;
     box.style.color = "black";
-    
+    count++;
     let win = checkWinner();
     if (count === 9 && !win) {
       gameDraw();
     }
-    count++;
+   
   });
 });
-
 
 const changeTurn = () => {
   if (turnOfX == true) {
@@ -59,7 +57,6 @@ const changeTurn = () => {
   }
 };
 
-
 const resetGame = () => {
   for (box of boxes) {
     box.innerHTML = "";
@@ -70,7 +67,6 @@ const resetGame = () => {
     count = 0;
   }
 };
-
 
 const checkWinner = () => {
   for (let pattern of winPatterns) {
@@ -87,7 +83,6 @@ const checkWinner = () => {
   }
 };
 
-
 const enableBoxes = () => {
   for (box of boxes) {
     box.disabled = false;
@@ -99,7 +94,6 @@ const disableBoxes = () => {
   }
 };
 
-
 const showWinner = (winner) => {
   mssge.innerHTML = `Congratulations, ${winner} is winner.`;
   mssgeContainer.classList.remove("hide");
@@ -107,14 +101,12 @@ const showWinner = (winner) => {
   disableBoxes();
 };
 
-
 const gameDraw = () => {
   mssge.innerHTML = `Game is Draw`;
   mssgeContainer.classList.remove("hide");
   turn.classList.add("hide");
   disableBoxes();
 };
-
 
 resetBtn.addEventListener("click", resetGame);
 newBtn.addEventListener("click", resetGame);
